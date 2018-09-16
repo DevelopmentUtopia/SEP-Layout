@@ -14,12 +14,14 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     Button loginBtn;
     TextView registerTv;
+    EditText idEt, passwordEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,15 @@ public class LoginActivity extends AppCompatActivity {
 
         initView();
         setListener();
+        if(getIntent() != null){
+            Bundle bundle = getIntent().getBundleExtra("Bundle");
+            if(bundle != null){
+                String id = bundle.getString("ID");
+                String password = bundle.getString("Password");
+                idEt.setText(id);
+                passwordEt.setText(password);
+            }
+        }
     }
 
     private void setListener() {
@@ -52,14 +63,19 @@ public class LoginActivity extends AppCompatActivity {
 
         NoUnderlineSpan span = new NoUnderlineSpan();
         spannableString.setSpan(span, 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(95, 202, 243)), 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         registerTv.setText(spannableString);
         registerTv.setMovementMethod(LinkMovementMethod.getInstance());
+
     }
 
     private void initView() {
         loginBtn = findViewById(R.id.loginBtn);
         registerTv = findViewById(R.id.registerTv);
+        idEt = findViewById(R.id.editText2);
+        passwordEt = findViewById(R.id.editText3);
     }
 
     public class NoUnderlineSpan extends UnderlineSpan {
