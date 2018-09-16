@@ -1,0 +1,72 @@
+package com.example.developer.seplayout;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.UnderlineSpan;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class LoginActivity extends AppCompatActivity {
+    Button loginBtn;
+    TextView registerTv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.login);
+
+        initView();
+        setListener();
+    }
+
+    private void setListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).
+                        show();
+            }
+        });
+
+        CharSequence text = registerTv.getText();
+        SpannableString spannableString = new SpannableString(text);
+        spannableString.setSpan(new ClickableSpan() {
+
+            @Override
+            public void onClick(View widget) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        }, 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        NoUnderlineSpan span = new NoUnderlineSpan();
+        spannableString.setSpan(span, 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new ForegroundColorSpan(Color.rgb(95, 202, 243)), 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        registerTv.setText(spannableString);
+        registerTv.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    private void initView() {
+        loginBtn = findViewById(R.id.loginBtn);
+        registerTv = findViewById(R.id.registerTv);
+    }
+
+    public class NoUnderlineSpan extends UnderlineSpan {
+        @Override
+        public void updateDrawState(TextPaint ds) {
+            ds.setUnderlineText(false);
+        }
+    }
+
+}
