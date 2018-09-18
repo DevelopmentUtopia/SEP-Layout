@@ -22,9 +22,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:elevation="2dp"
+                android:elevation="6dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:translationZ="4dp"
+                android:translationZ="12dp"
                 app:cardCornerRadius="10dp">
 
                 <android.support.constraint.ConstraintLayout
@@ -95,9 +95,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:elevation="2dp"
+                android:elevation="6dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:translationZ="4dp"
+                android:translationZ="12dp"
                 app:cardCornerRadius="10dp">
 
                 <android.support.constraint.ConstraintLayout
@@ -168,9 +168,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:elevation="2dp"
+                android:elevation="6dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:translationZ="4dp"
+                android:translationZ="12dp"
                 app:cardCornerRadius="10dp">
 
                 <android.support.constraint.ConstraintLayout
@@ -241,9 +241,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:elevation="2dp"
+                android:elevation="6dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:translationZ="4dp"
+                android:translationZ="12dp"
                 app:cardCornerRadius="10dp">
 
                 <android.support.constraint.ConstraintLayout
@@ -314,9 +314,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:elevation="2dp"
+                android:elevation="6dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:translationZ="4dp"
+                android:translationZ="12dp"
                 app:cardCornerRadius="10dp">
 
                 <android.support.constraint.ConstraintLayout
@@ -387,9 +387,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:elevation="2dp"
+                android:elevation="6dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:translationZ="4dp"
+                android:translationZ="12dp"
                 app:cardCornerRadius="10dp">
 
                 <android.support.constraint.ConstraintLayout
@@ -454,14 +454,4 @@
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
-
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_search_black_18dp_1x"
-        app:borderWidth="0dp"
-        app:fabSize="normal"
-        android:elevation="6dp"
-        app:pressedTranslationZ="12dp"
-        android:foregroundGravity="bottom|right"/>
 </android.support.constraint.ConstraintLayout>
