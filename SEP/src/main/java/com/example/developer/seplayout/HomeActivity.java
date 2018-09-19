@@ -43,6 +43,7 @@ public class HomeActivity extends AppCompatActivity{
 
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(95, 202, 243)), 0, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
+        CW1_tv.setHighlightColor(getResources().getColor(android.R.color.transparent));
         CW1_tv.setText(spannableString);
         CW1_tv.setMovementMethod(LinkMovementMethod.getInstance());
     }
