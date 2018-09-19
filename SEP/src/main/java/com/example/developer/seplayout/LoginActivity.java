@@ -29,9 +29,9 @@ public class LoginActivity extends AppCompatActivity {
 
         initView();
         setListener();
-        if(getIntent() != null){
+        if (getIntent() != null) {
             Bundle bundle = getIntent().getBundleExtra("Bundle");
-            if(bundle != null){
+            if (bundle != null) {
                 String id = bundle.getString("ID");
                 String password = bundle.getString("Password");
                 idEt.setText(id);
@@ -65,7 +65,8 @@ public class LoginActivity extends AppCompatActivity {
         spannableString.setSpan(span, 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(95, 202, 243)), 23, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
+        
+        registerTv.setHighlightColor(getResources().getColor(android.R.color.transparent));
         registerTv.setText(spannableString);
         registerTv.setMovementMethod(LinkMovementMethod.getInstance());
 

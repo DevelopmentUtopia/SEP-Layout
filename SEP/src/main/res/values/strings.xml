@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">SEP Layout</string>
     <!--login-->
-    <string name = "hint_id_login">Staff or student number</string>
-    <string name = "hint_password_login">UTS email password</string>
+    <string name="hint_id_login">Staff or student number</string>
+    <string name="hint_password_login">UTS email password</string>
     <string name="login_button">Login</string>
     <string name="register">Don\'t have an account? Create a UTS Account.</string>
     <!--register-->
     <string name="hint_id_register">Enter the ID</string>
     <string name="hint_password_register">Enter the password</string>
     <string name="register_button">Register</string>
+    <string name="cancel_button">Cancel</string>
     <!--home-->
     <string name="doctor_name">Name: XXXXXX</string>
     <string name="doctor_description">Description: XXXXXXXXXXXXX</string>

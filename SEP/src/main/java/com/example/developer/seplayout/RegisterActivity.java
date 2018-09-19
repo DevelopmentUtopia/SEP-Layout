@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class RegisterActivity extends AppCompatActivity{
     EditText idEt, passwordEt;
-    Button registerBtn;
+    Button registerBtn, cancelBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,11 +35,18 @@ public class RegisterActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void initView() {
         idEt = findViewById(R.id.editText);
         passwordEt = findViewById(R.id.editText4);
-        registerBtn = findViewById(R.id.button);
+        registerBtn = findViewById(R.id.button2);
+        cancelBtn = findViewById(R.id.button);
     }
 }
